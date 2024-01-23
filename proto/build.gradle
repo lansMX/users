@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'com.google.protobuf' version '0.8.19'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir = ['src/generated/main']
+        }
+    }
+}
+
+dependencies {
+    implementation 'io.grpc:grpc-all:1.58.0'
+    implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+    compileOnly 'com.google.api.grpc:proto-google-common-protos:2.14.3'
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+}
+
+group = 'com.user'

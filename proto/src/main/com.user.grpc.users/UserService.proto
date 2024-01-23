@@ -1,0 +1,22 @@
+syntax = "proto3";
+option go_package = "./";
+package com.user.users;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+message TestResponse {
+   string message = 1;
+}
+
+message TestRequest {
+  string message = 1;
+}
+
+service UserService {
+  rpc test(TestResponse) returns (TestRequest) {
+   option (google.api.http) = {
+     get: "/rpc/test"
+   }
+  }
+}
