@@ -4,6 +4,7 @@ HELP.md
 .idea
 
 .idea/
+.gradle/
 
 gradle/
 build/
